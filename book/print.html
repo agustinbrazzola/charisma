@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Charisma Social</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="valueprop.html"><strong aria-hidden="true">2.</strong> Value Proposition</a></li><li class="chapter-item expanded "><a href="tool.html"><strong aria-hidden="true">3.</strong> Charisma as a Tool</a></li><li class="chapter-item expanded "><a href="network.html"><strong aria-hidden="true">4.</strong> Charisma as a Network</a></li><li class="chapter-item expanded "><a href="revenue.html"><strong aria-hidden="true">5.</strong> Revenue Model</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Charisma Social</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>This is a set of thoughts I want to share with Charisma team in order to express what my thoughts about the future product are. </p>
+<p>I think reputation analysis is one of the most important problems the web 3 space has as a challenge.</p>
+<p>In this documentation you will find the following modules:</p>
+<ol>
+<li>Value proposition</li>
+<li>Structure proposal</li>
+<li>Workflows</li>
+<li>Charisma as a tool</li>
+<li>Charisma as a social network</li>
+<li>Revenue model</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="value-proposition"><a class="header" href="#value-proposition">Value proposition</a></h1>
+<p>Reputation is important in any aspect of life. It's even more important in an anonymous framework where at some point we take leaps of faith on trusting parties.</p>
+<p>Digital identities and great however also tricky. Anybody can change social profiles, and act as someone they aren't really. </p>
+<p>But we all know that. What I'll try to explain here, is the value Charisma could bring, against other platforms which coul've but didn't make it.</p>
+<h2 id="the-problem-of-etherscan"><a class="header" href="#the-problem-of-etherscan">The problem of Etherscan</a></h2>
+<p>When a user is onboarded on a platform, usually is redirected to a URL that creates an account, has some guide/documentation/tutorials on how to get the best experience of the product and if the platform is good it will bring a helper that inducts the behaviour on the user's first steps. </p>
+<p>Think about the first time you created your decentralized wallet. You probable spent sometime googling &quot;create a metamask wallet&quot;, docs are not so straight forward and you probably had to ask somebody to send you funds. In my particular case, the person who onboarded me, once sent the eth, showed me Etherscan and explained that was the &quot;database&quot; where I could see funds flowing around.</p>
+<p>I have a technical background and I struggled to understand it for several months. I still find new features that I think are highly valuable but nobody really explained us how to use it and it doesn't seem like the builders of Etherscan are trying to create an easy experience for users. Different is for developers. </p>
+<p>What happens here? When you have limited computational power you have to choose. Etherscan is already a heavy query machine, and it can't support millions of users executing a fancy UI.</p>
+<p>However, Etherscan is a tool, but also could be a network. It would be the safest place to look for new projects, to message other wallets and visualising data. </p>
+<h2 id="this-is-not-the-first-analytics-tool"><a class="header" href="#this-is-not-the-first-analytics-tool">This is not the first analytics tool</a></h2>
+<p>When I talk about data platforms here, I'm focusing on NFT platforms. DeFI is a more mature space that has a longer development on consuming data. Also, DeFI is not about personalities but explicitly about tools that provide yield or stability.</p>
+<p>There are more data platforms than Etherscan, obviously. Most of them are following on investment purposes.</p>
+<p>For the NFT space, most analytics platforms focus on investment purposes. They will analyse floor prices, amount of NFTs listed on certain collections and some of them will give you the possibility to follow wallet activity. But they are not about understanding reasons behind wallet, they are not really about understanding the users.</p>
+<h2 id="whats-the-value-of-charisma"><a class="header" href="#whats-the-value-of-charisma">What's the value of Charisma</a></h2>
+<p>We want to solve the problem Etherscan didn't tackle. We want to be the framework that allows to take data schemas other people or you created, and use it to measure the wallets you want.</p>
+<p>We want to become that onboarding platform that makes everything simpler, that allows you to find people like yourself, or people you want to look like. We want to be interactive and become a place of connection between people.</p>
+<p>We also want to provide services to business. We want to be able to be integrated by other parties, through our APIs. We want to build novel ways of interacting with NFTs that companies and protocols can spin and enrich their businesses with Charisma's network. </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="charisma-as-a-tool"><a class="header" href="#charisma-as-a-tool">Charisma as a tool</a></h1>
+<p>There are two aspects about Charisma that can be considered a tool.</p>
+<h2 id="dashboard-creator"><a class="header" href="#dashboard-creator">Dashboard creator</a></h2>
+<p>We can build a framework that allows users to analyse data the way they want. They will be able to grab Charisma's trate and customize the min and max that qualify for that criteria. We will also would like to provide some raw data that gives a more analytical description of the wallet. For example: 30% Diamond hand influence, 50% downtrend.</p>
+<h2 id="wallet-calendar"><a class="header" href="#wallet-calendar">Wallet calendar</a></h2>
+<p>We can set calendars for a different set of dates we would like to track. </p>
+<p>Wallet birthdays. Wallet engagement dates. 1st NFT mint. </p>
+<h2 id="sdks-and-apis"><a class="header" href="#sdks-and-apis">SDKs and APIs</a></h2>
+<p>A Charisma SDK could be developed to attract developers that want to integrate our business logic inside their platforms. </p>
+<p>Same with custom APIs we can create for different projects. For example, what's the common trait for your community. </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="charisma-as-a-network"><a class="header" href="#charisma-as-a-network">Charisma as a Network</a></h1>
+<p>Once the tool is adopted and people start enjoying hanging out in Charisma, the platform should be populated enough to make users interact with each other. This is step is very hard to accomplish, due that social networks need a high level of network effects in order to be succesful. However, web 3 could enable that possibility if executed correctly.</p>
+<h2 id="social-content-behind-the-wallets"><a class="header" href="#social-content-behind-the-wallets">Social content behind the wallets</a></h2>
+<p>This feature brings the composability of other social networks and tie that data directly to economical behaviour. This concept is very powerful.</p>
+<h2 id="celebrity-tracking"><a class="header" href="#celebrity-tracking">Celebrity Tracking</a></h2>
+<p>People love celebrities and celebrities love to be featured. If the platform gets the attention of some of them, the word of mouth could be very powerful. </p>
+<h2 id="wallet-birthdays"><a class="header" href="#wallet-birthdays">Wallet birthdays</a></h2>
+<p>Although this could be seen as a tool, it could also bring network effects. The fact of gifting an NFT for a birthday of the wallet could be a trend that drives adoption to the platform, and it should be very well thought when it's launched. </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="revenue-model"><a class="header" href="#revenue-model">Revenue model</a></h1>
+<p>There are a few aspects where Charisma will be able to monetize. </p>
+<h2 id="integrations"><a class="header" href="#integrations">Integrations</a></h2>
+<p>The ability to plug and play a reputation system into your website is a service that is very cheap for the impact that generates. Consulting services on how to integrate Charisma would be one way.</p>
+<h2 id="freemium-services"><a class="header" href="#freemium-services">Freemium services</a></h2>
+<p>A free platform that is limited to some features, that enables full features with subscription models.</p>
+<h2 id="nft-as-a-gift"><a class="header" href="#nft-as-a-gift">NFT as a gift</a></h2>
+<p>Constant minting of gift cards as NFTs.</p>
+<h2 id="advertising"><a class="header" href="#advertising">Advertising</a></h2>
+<p>Advertise NFT collections / sponsors that want to contribute to Charisma Ecosystem.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>
