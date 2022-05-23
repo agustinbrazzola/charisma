@@ -5,3 +5,4 @@
 - [Charisma as a Tool](./tool.md)
 - [Charisma as a Network](./network.md)
 - [Revenue Model](./revenue.md)
+- [Structure Proposal](./structure.md)

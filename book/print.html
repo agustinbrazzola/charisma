@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="valueprop.html"><strong aria-hidden="true">2.</strong> Value Proposition</a></li><li class="chapter-item expanded "><a href="tool.html"><strong aria-hidden="true">3.</strong> Charisma as a Tool</a></li><li class="chapter-item expanded "><a href="network.html"><strong aria-hidden="true">4.</strong> Charisma as a Network</a></li><li class="chapter-item expanded "><a href="revenue.html"><strong aria-hidden="true">5.</strong> Revenue Model</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="valueprop.html"><strong aria-hidden="true">2.</strong> Value Proposition</a></li><li class="chapter-item expanded "><a href="tool.html"><strong aria-hidden="true">3.</strong> Charisma as a Tool</a></li><li class="chapter-item expanded "><a href="network.html"><strong aria-hidden="true">4.</strong> Charisma as a Network</a></li><li class="chapter-item expanded "><a href="revenue.html"><strong aria-hidden="true">5.</strong> Revenue Model</a></li><li class="chapter-item expanded "><a href="structure.html"><strong aria-hidden="true">6.</strong> Structure Proposal</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -201,6 +201,26 @@
 <p>Constant minting of gift cards as NFTs.</p>
 <h2 id="advertising"><a class="header" href="#advertising">Advertising</a></h2>
 <p>Advertise NFT collections / sponsors that want to contribute to Charisma Ecosystem.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="structure"><a class="header" href="#structure">Structure</a></h1>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>A product that works as a tool and also as a network has some challenges that need to be thought before establishing a structure.</p>
+<p>We will need to work on infrastructure but also social features that make the network grow. The ideal startpoint looks like the following:</p>
+<ul>
+<li>2 frontend devs (React.js, Next.js, Chart libraries, Design is a plus)</li>
+<li>1 backend dev (Docker, AWS, CI/CD knowledge, Python/Flask/FastAPI, MongoDB)</li>
+<li>2 data scientists (Python, FastAPI, MongoDB)</li>
+<li>1 Blockchain engineer (Solidity, Subgraphs, IPFS, Arweave, Lens knowledge is a plus)</li>
+</ul>
+<h3 id="frontend"><a class="header" href="#frontend">Frontend</a></h3>
+<p>The frontend area of the product needs two people to escalate, due that the Dashboard update/maintainance process should take a full time position. This would be the frontend developer in charge of the tool aspect of the product. Add filter options, data aggregation features, drilldowns, labeling conditions, etc. If we want the tool to be useful, we need to become Tableau for reputation.</p>
+<p>On the other side of the product, we need a person developing the social UI. Wallet birthdays, Celebrity tracking and On-Chain social functions (like lens) should be in charge of this person.</p>
+<h3 id="backend"><a class="header" href="#backend">Backend</a></h3>
+<p>The backend will need to run DevOps in a beginning. Will need to dockerize components, work on the server-side optimizing performance and costs. Will also have to connect with On-Chain APIs and the internal APIs which are built by the data team. MongoDB is a plus, due at some point we will need a more robust backend, and Mongo is very dynamic and flexible.</p>
+<h3 id="data-science"><a class="header" href="#data-science">Data Science</a></h3>
+<p>The data science team builds the commodity for the product. As we are a data-driven product we need different data sources, expressions and categories to be created as constantly as possible. The future of the product should be shaped by this team mainly. </p>
+<p>Similarly to the frontend team, two people should be divided between the tool and network sides of the product, but also would be best if they could touchpoint together, due to the nature of data tasks. A lof of this &quot;open data&quot; job, is about creativity. </p>
+<h3 id="blockchain"><a class="header" href="#blockchain">Blockchain</a></h3>
+<p>Due we are working with blockchain related data, it's very useful to have a blockchain person that is able to write smart contracts, do research, work with IPFS/Pinata/Arweave, and build subgraphs around products. There are a lot of NFT collections that don't have a deployed subgraph and although much of the data can be accessed through OS API, there are more granular structures that can be built. </p>
 
                     </main>
 
